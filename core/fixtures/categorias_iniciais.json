@@ -1,0 +1,241 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "username": "admin",
+      "email": "admin@fintrack.com",
+      "is_staff": true,
+      "is_superuser": true,
+      "is_active": true,
+      "password": "pbkdf2_sha256$870000$test$hashedpassword"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "username": "usuario_teste",
+      "email": "teste@fintrack.com",
+      "is_staff": false,
+      "is_superuser": false,
+      "is_active": true,
+      "password": "pbkdf2_sha256$870000$test$hashedpassword"
+    }
+  },
+  {
+    "model": "core.categoria",
+    "pk": 1,
+    "fields": {
+      "usuario": 2,
+      "nome": "Alimentação",
+      "tipo": "D",
+      "icone": "cart",
+      "cor": "#FF6B6B"
+    }
+  },
+  {
+    "model": "core.categoria",
+    "pk": 2,
+    "fields": {
+      "usuario": 2,
+      "nome": "Transporte",
+      "tipo": "D",
+      "icone": "car",
+      "cor": "#4ECDC4"
+    }
+  },
+  {
+    "model": "core.categoria",
+    "pk": 3,
+    "fields": {
+      "usuario": 2,
+      "nome": "Moradia",
+      "tipo": "D",
+      "icone": "house",
+      "cor": "#45B7D1"
+    }
+  },
+  {
+    "model": "core.categoria",
+    "pk": 4,
+    "fields": {
+      "usuario": 2,
+      "nome": "Saúde",
+      "tipo": "D",
+      "icone": "heart",
+      "cor": "#96CEB4"
+    }
+  },
+  {
+    "model": "core.categoria",
+    "pk": 5,
+    "fields": {
+      "usuario": 2,
+      "nome": "Lazer",
+      "tipo": "D",
+      "icone": "star",
+      "cor": "#FFEAA7"
+    }
+  },
+  {
+    "model": "core.categoria",
+    "pk": 6,
+    "fields": {
+      "usuario": 2,
+      "nome": "Educação",
+      "tipo": "D",
+      "icone": "book",
+      "cor": "#DDA0DD"
+    }
+  },
+  {
+    "model": "core.categoria",
+    "pk": 7,
+    "fields": {
+      "usuario": 2,
+      "nome": "Salário",
+      "tipo": "R",
+      "icone": "cash",
+      "cor": "#55EFC4"
+    }
+  },
+  {
+    "model": "core.categoria",
+    "pk": 8,
+    "fields": {
+      "usuario": 2,
+      "nome": "Freelance",
+      "tipo": "R",
+      "icone": "laptop",
+      "cor": "#74B9FF"
+    }
+  },
+  {
+    "model": "core.categoria",
+    "pk": 9,
+    "fields": {
+      "usuario": 2,
+      "nome": "Investimentos",
+      "tipo": "R",
+      "icone": "trending-up",
+      "cor": "#A29BFE"
+    }
+  },
+  {
+    "model": "core.contabancaria",
+    "pk": 1,
+    "fields": {
+      "usuario": 2,
+      "nome": "Conta Corrente",
+      "saldo_inicial": "2500.00"
+    }
+  },
+  {
+    "model": "core.contabancaria",
+    "pk": 2,
+    "fields": {
+      "usuario": 2,
+      "nome": "Poupança",
+      "saldo_inicial": "8000.00"
+    }
+  },
+  {
+    "model": "core.transacao",
+    "pk": 1,
+    "fields": {
+      "usuario": 2,
+      "categoria": 7,
+      "conta": 1,
+      "descricao": "Salário maio",
+      "valor": "3500.00",
+      "data": "2026-05-05",
+      "tipo": "R"
+    }
+  },
+  {
+    "model": "core.transacao",
+    "pk": 2,
+    "fields": {
+      "usuario": 2,
+      "categoria": 1,
+      "conta": 1,
+      "descricao": "Supermercado",
+      "valor": "320.50",
+      "data": "2026-05-08",
+      "tipo": "D"
+    }
+  },
+  {
+    "model": "core.transacao",
+    "pk": 3,
+    "fields": {
+      "usuario": 2,
+      "categoria": 2,
+      "conta": 1,
+      "descricao": "Combustível",
+      "valor": "150.00",
+      "data": "2026-05-10",
+      "tipo": "D"
+    }
+  },
+  {
+    "model": "core.transacao",
+    "pk": 4,
+    "fields": {
+      "usuario": 2,
+      "categoria": 3,
+      "conta": 1,
+      "descricao": "Aluguel",
+      "valor": "900.00",
+      "data": "2026-05-01",
+      "tipo": "D"
+    }
+  },
+  {
+    "model": "core.transacao",
+    "pk": 5,
+    "fields": {
+      "usuario": 2,
+      "categoria": 8,
+      "conta": null,
+      "descricao": "Projeto website cliente",
+      "valor": "800.00",
+      "data": "2026-05-15",
+      "tipo": "R"
+    }
+  },
+  {
+    "model": "core.orcamento",
+    "pk": 1,
+    "fields": {
+      "usuario": 2,
+      "categoria": 1,
+      "mes": 5,
+      "ano": 2026,
+      "valor_limite": "500.00"
+    }
+  },
+  {
+    "model": "core.orcamento",
+    "pk": 2,
+    "fields": {
+      "usuario": 2,
+      "categoria": 2,
+      "mes": 5,
+      "ano": 2026,
+      "valor_limite": "200.00"
+    }
+  },
+  {
+    "model": "core.orcamento",
+    "pk": 3,
+    "fields": {
+      "usuario": 2,
+      "categoria": 3,
+      "mes": 5,
+      "ano": 2026,
+      "valor_limite": "950.00"
+    }
+  }
+]
