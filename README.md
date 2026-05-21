@@ -164,5 +164,5 @@ Define um teto de gastos por categoria em determinado mês.
 | Nome | GitHub |
 |------|--------|
 | Miguel Chagas | @MiguelChagas |
-| Henrique Cesar | @henriquecesar |
+| Henrique Cesar | @henriqueecss |
 | Bernardo Pavani | @Bernardopavani |
