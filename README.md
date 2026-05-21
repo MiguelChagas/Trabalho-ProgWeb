@@ -16,7 +16,13 @@ Aplicação web para registro de receitas e despesas, organização por categori
 ```bash
 git clone https://github.com/MiguelChagas/Trabalho-ProgWeb.git
 cd Trabalho-ProgWeb
-docker compose up --build
+docker compose up --build -d
+```
+
+Aplique as migrations (primeira vez):
+
+```bash
+docker compose exec web python manage.py migrate
 ```
 
 Acesse em: http://localhost:8000
