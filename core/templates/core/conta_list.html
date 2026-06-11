@@ -1,0 +1,36 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Contas Bancárias</h2>
+    <a href="{% url 'core:conta_create' %}" class="btn btn-success">Nova Conta</a>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Saldo Inicial</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for conta in contas %}
+                <tr>
+                    <td>{{ conta.nome }}</td>
+                    <td>R$ {{ conta.saldo_inicial|floatformat:2 }}</td>
+                    <td>
+                        <a href="{% url 'core:conta_update' conta.pk %}" class="btn btn-sm btn-primary">Editar</a>
+                        <a href="{% url 'core:conta_delete' conta.pk %}" class="btn btn-sm btn-danger">Excluir</a>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr><td colspan="3" class="text-center text-muted">Nenhuma conta cadastrada.</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

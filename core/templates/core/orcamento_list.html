@@ -1,0 +1,38 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Orçamentos</h2>
+    <a href="{% url 'core:orcamento_create' %}" class="btn btn-success">Novo Orçamento</a>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Categoria</th>
+                    <th>Mês/Ano</th>
+                    <th>Limite</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for o in orcamentos %}
+                <tr>
+                    <td>{{ o.categoria.nome }}</td>
+                    <td>{{ o.mes }}/{{ o.ano }}</td>
+                    <td>R$ {{ o.valor_limite|floatformat:2 }}</td>
+                    <td>
+                        <a href="{% url 'core:orcamento_update' o.pk %}" class="btn btn-sm btn-primary">Editar</a>
+                        <a href="{% url 'core:orcamento_delete' o.pk %}" class="btn btn-sm btn-danger">Excluir</a>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr><td colspan="4" class="text-center text-muted">Nenhum orçamento cadastrado.</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

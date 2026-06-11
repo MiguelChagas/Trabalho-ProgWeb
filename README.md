@@ -7,7 +7,7 @@ Aplicação web para registro de receitas e despesas, organização por categori
 - **Backend:** Python 3.12, Django 6.x
 - **Banco de Dados:** PostgreSQL 15
 - **Infraestrutura:** Docker e Docker Compose
-- **Frontend:** HTML, CSS (Bootstrap) e Chart.js
+- **Frontend:** HTML, CSS (Bootstrap 5)
 
 ## Como rodar o projeto localmente
 
@@ -56,6 +56,20 @@ python manage.py runserver
 | `usuario_teste` | `teste123` | Usuário comum |
 
 > As fixtures criam o `usuario_teste` com dados de exemplo (categorias, transações e orçamentos de maio/2026).
+
+## Funcionalidades da Área do Usuário
+
+Após o login (`/contas/login/`), o usuário tem acesso a:
+
+| Seção | Rota | Descrição |
+|-------|------|-----------|
+| Dashboard | `/` | Resumo de saldo, receitas, despesas e últimas transações |
+| Transações | `/transacoes/` | Listagem, criação, edição e exclusão de transações |
+| Categorias | `/categorias/` | Gerenciamento de categorias de receita e despesa |
+| Contas Bancárias | `/contas/` | Gerenciamento de contas com saldo inicial |
+| Orçamentos | `/orcamentos/` | Definição de limites de gasto por categoria/mês |
+
+O ambiente administrativo (`/admin/`) é restrito a superusuários e permite gerenciar todos os dados da plataforma.
 
 ## Modelo de Dados
 

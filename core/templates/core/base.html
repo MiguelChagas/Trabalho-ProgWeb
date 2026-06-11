@@ -18,6 +18,15 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'core:transacao_list' %}">Transações</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'core:categoria_list' %}">Categorias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'core:conta_list' %}">Contas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'core:orcamento_list' %}">Orçamentos</a>
+                    </li>
                 </ul>
                 <div class="d-flex text-light align-items-center">
                     <span class="me-3">Olá, {{ user.username }}</span>
