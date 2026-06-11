@@ -13,7 +13,7 @@ class TransacaoInline(admin.TabularInline):
 
 @admin.register(Categoria)
 class CategoriaAdmin(admin.ModelAdmin):
-    list_display = ('nome', 'tipo', 'cor', 'icone')
+    list_display = ('nome', 'tipo', 'cor', 'icone', 'usuario')
     list_filter = ('tipo',)
     search_fields = ('nome',)
     exclude = ('usuario',) 
@@ -41,7 +41,7 @@ class CategoriaAdmin(admin.ModelAdmin):
 
 @admin.register(ContaBancaria)
 class ContaBancariaAdmin(admin.ModelAdmin):
-    list_display = ('nome', 'saldo_inicial')
+    list_display = ('nome', 'saldo_inicial', 'usuario')
     search_fields = ('nome',)
     exclude = ('usuario',)
 
@@ -58,7 +58,7 @@ class ContaBancariaAdmin(admin.ModelAdmin):
 
 @admin.register(Transacao)
 class TransacaoAdmin(admin.ModelAdmin):
-    list_display = ('descricao', 'valor', 'data', 'tipo', 'categoria', 'conta')
+    list_display = ('descricao', 'valor', 'data', 'tipo', 'categoria', 'conta', 'usuario')
     list_filter = ('tipo', 'data', 'categoria')
     search_fields = ('descricao',)
     exclude = ('usuario',)
@@ -84,7 +84,7 @@ class TransacaoAdmin(admin.ModelAdmin):
 
 @admin.register(Orcamento)
 class OrcamentoAdmin(admin.ModelAdmin):
-    list_display = ('categoria', 'mes', 'ano', 'valor_limite')
+    list_display = ('categoria', 'mes', 'ano', 'valor_limite', 'usuario')
     list_filter = ('mes', 'ano', 'categoria')
     exclude = ('usuario',)
 
